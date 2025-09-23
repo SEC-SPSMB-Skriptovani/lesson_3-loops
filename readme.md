@@ -116,10 +116,12 @@ done
 
 ## Cvičení
 1. Vytvoř skript `parrot.sh`, který:
-2. Čeká na vstup od uživatele.
-3. Ukončí cyklus a skript, pokud uživatel zadá vstup "sušenka".
+2. Vypíše do konzole "Dej mi sušenku!"
+3. Čeká na vstup od uživatele.
+4. Ukončí cyklus a skript, pouze pokud uživatel zadá vstup "sušenka".
+5. Při libovolném jiném vstupu opakuje cyklus (opět vypíše "Dej mi sušenku!).
 
-![parrot_example](https://github.com/user-attachments/assets/246c6341-dfe1-43d8-afa4-782aa54dbdbf)
+<img src="https://github.com/user-attachments/assets/246c6341-dfe1-43d8-afa4-782aa54dbdbf" alt="parrot_example" height="700"/>
 
 > [💡Tip]
 > Použijte kombinaci příkazů `while`, případně `until` a `read` pro získání uživatleského vstupu. Pro ukončení programu lze použít příkaz `break`. 
