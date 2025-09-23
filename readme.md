@@ -1,0 +1,123 @@
+# Cykly v Bash
+
+## Na co použít cykly v Bash?
+Cykly umožňují **opakovat příkazy** bez nutnosti je psát vícekrát.  
+Používají se pro **iteraci přes soubory, číselné řady, obsah souborů, nebo pro opakované spuštění příkazů**.
+
+---
+
+## Základní `for` loop
+Tento cyklus projde **seznam hodnot** (např. soubory) a provede příkaz pro každý prvek.
+
+```bash
+path="/home/student/scripts/*"
+for i in $path; do
+  echo "$i"
+done
+```
+
+Tento příkaz projde všechny soubory, ve složce `/home/student/scripts/`, a vypíše je.
+
+---
+
+## C-like `for` loop
+Podobný klasickým programovacím jazykům (C, Java, Python).  
+Můžeme kontrolovat proměnnou, počáteční hodnotu, podmínku a krok.
+
+```bash
+for ((i = 0 ; i < 100 ; i++)); do
+  echo "$i"
+done
+```
+
+- `i=0` → počáteční hodnota
+- `i<100` → podmínka, dokud se cyklus vykonává
+- `i++` → inkrementace o 1
+
+---
+
+## Rozsahy (`ranges`)
+Bash umí generovat posloupnost čísel pomocí `{start..end}`.
+
+```bash
+for i in {1..5}; do
+    echo "Welcome $i"
+done
+```
+
+Výstup:
+```
+Welcome 1
+Welcome 2
+Welcome 3
+Welcome 4
+Welcome 5
+```
+
+---
+
+## Rozsahy se skokem (step size)
+Můžeme přidat třetí parametr pro **krok** (inkrement).
+
+```bash
+for i in {5..50..5}; do
+    echo "Welcome $i"
+done
+```
+
+Výstup:
+```
+Welcome 5
+Welcome 10
+Welcome 15
+...
+Welcome 50
+```
+
+---
+
+## While vs Until
+Cyklus `while [[ podmínka ]]` → cyklus se spustí pouze, pokud je podmínka pravdivá **(true)**.
+
+```bash
+count=1
+
+while [[ $count -le 5 ]]; do
+echo "Číslo je: $count"
+((count++))
+done
+```
+
+Cyklus `until [[ podmínka ]]` → cyklus se spustí, dokud podmínka **není** pravdivá
+```bash
+until [[ $count -gt 5 ]]; do
+    echo "Číslo: $count"
+    ((count++))
+done
+```
+
+
+---
+
+## Nekonečný cyklus (`forever loop`)
+Pokud potřebuješ cyklus, který **běží pořád**, použij `while true`.
+
+```bash
+while true; do
+  echo "Běží to stále..."
+  sleep 1
+done
+```
+
+- `true` je vždy pravdivý příkaz
+- `sleep 1` zpomalí výpis na 1 sekundu (jinak by terminál zahltil)
+
+---
+
+## Cvičení
+1. Vytvoř skript `parrot.sh`, který:
+2. Čeká na vstup od uživatele.
+3. Ukončí cyklus a skript, pokud uživatel zadá vstup "sušenka".
+
+> [💡Tip]
+> Použijte příkazy while, nebo until, read pro získání uživatleského vstupu, případně `break` pro ukončení programu. 
