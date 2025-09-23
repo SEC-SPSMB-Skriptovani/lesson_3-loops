@@ -100,11 +100,11 @@ done
 ---
 
 ## Nekonečný cyklus (`forever loop`)
-Pokud potřebuješ cyklus, který **běží pořád**, použij `while true`.
+Pokud potřebuješ cyklus, který **nikdy neskončí**, použij `while true`.
 
 ```bash
 while true; do
-  echo "stále Běží..."
+  echo "Stále běží..."
   sleep 1
 done
 ```
