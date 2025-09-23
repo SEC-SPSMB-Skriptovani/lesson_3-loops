@@ -119,5 +119,7 @@ done
 2. Čeká na vstup od uživatele.
 3. Ukončí cyklus a skript, pokud uživatel zadá vstup "sušenka".
 
+![parrot_example](https://github.com/user-attachments/assets/246c6341-dfe1-43d8-afa4-782aa54dbdbf)
+
 > [💡Tip]
-> Použijte příkazy while, nebo until, read pro získání uživatleského vstupu, případně `break` pro ukončení programu. 
+> Použijte kombinaci příkazů `while`, případně `until` a `read` pro získání uživatleského vstupu. Pro ukončení programu lze použít příkaz `break`. 
