@@ -104,7 +104,7 @@ Pokud potřebuješ cyklus, který **běží pořád**, použij `while true`.
 
 ```bash
 while true; do
-  echo "Běží to stále..."
+  echo "stále Běží..."
   sleep 1
 done
 ```
