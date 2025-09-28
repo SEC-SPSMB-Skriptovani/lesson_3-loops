@@ -4,6 +4,7 @@
 Cykly umožňují **opakovat příkazy** bez nutnosti je psát vícekrát.  
 Používají se pro **iteraci přes soubory, číselné řady, obsah souborů, nebo pro opakované spuštění příkazů**.
 
+[![YOUTUBE - Why you need to learn BASH Scripting RIGHT NOW!!](https://img.youtube.com/vi/nW9M0MQinfg/0.jpg)](https://www.youtube.com/watch?v=nW9M0MQinfg)
 ---
 
 ## Základní `for` loop
@@ -13,6 +14,12 @@ Tento cyklus projde **seznam hodnot** (např. soubory) a provede příkaz pro ka
 path="/home/student/scripts/*"
 for i in $path; do
   echo "$i"
+done
+```
+
+```bash
+for i in "Adam" "Barbora" "Cyril" "David" "Eva" "Franta" "Gabriel" "Hynek" "Ivan" "Jana"; do
+  echo "print $i"
 done
 ```
 
