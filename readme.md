@@ -18,8 +18,8 @@ done
 ```
 
 ```bash
-for i in "Adam" "Barbora" "Cyril" "David" "Eva" "Franta" "Gabriel" "Hynek" "Ivan" "Jana"; do
-  echo "print $i"
+for i in "Adame" "Barboro" "Cyrile" "Davide" "Evo" "Franto" "Gabrieli" "Hynku" "Ivane" "Jano"; do
+  echo "Zdravím, $i"
 done
 ```
 
